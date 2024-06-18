@@ -8,6 +8,7 @@ import {
   TransitionChild,
 } from "@headlessui/react";
 import Image from "next/image";
+import Link from "next/link";
 type Props = {};
 
 const Footer = (props: Props) => {
@@ -255,6 +256,9 @@ const Footer = (props: Props) => {
                 </a>
               </li>
             </ul>
+            <ul>
+              <li className="text-[#ffffff] made-love">Made with ❤️</li>
+            </ul>
             <ul className="flex items-center mb-4 sm:mb-0 text-[#7d8590] flex-wrap">
               <li className="mr-3 ">© 2023 GitHub, Inc.</li>
               <li className="mr-3 ">
@@ -275,44 +279,36 @@ const Footer = (props: Props) => {
       </div>
       <div className="relative">
         <div className="fixed bottom-0 z-20 right-0 right-5 flex items-center justify-center gap-3">
-          <a
+          <Link
             href="/chat"
             className="z-20 text-white flex flex-col shrink-0 grow-0 justify-around 
                    rounded-lg
                   mr-1 mb-5 lg:mr-5 lg:mb-5 xl:mr-10 xl:mb-10"
           >
-            <div className="p-3 flex items-center gap-4 justify-center rounded-full border-4 border-white bg-green-600">
-              Chat with AI
-              <svg
-                className="w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
+            <div className=" p-3 border-2 rounded-full">
+              <Image
+                className="rounded-full"
+                src="/aigif.gif"
+                width={55}
+                height={55}
+                alt=""
+              />
             </div>
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://g.dev/Luis-Ai-Engineer"
             className=" text-white flex flex-col shrink-0 grow-0 justify-around 
                    rounded-lg
                   mr-1 mb-5 lg:mr-5 lg:mb-5 xl:mr-10 xl:mb-10"
           >
-            <div className="">
-              <Image
-                src="/simple-bottom-logo.png"
-                width={40}
-                height={40}
-                alt="chat"
-              />
+            <div
+              className="bg-white p-3 rounded-full wpaicg_toggle"
+              id="wpaicg_toggle_116774"
+            >
+              <img src="https://ai-engineer.cloud/wp-content/uploads/2023/08/71583BE4-84BB-4A0D-B439-8D37C4AF73A6.png" />
             </div>
-          </a>
-          <span
+          </Link>
+          {/* <span
             onClick={() => setOpen(true)}
             className="cursor-pointer text-white flex flex-col shrink-0 grow-0 justify-around 
                    rounded-lg
@@ -321,10 +317,10 @@ const Footer = (props: Props) => {
             <div className="">
               <Image src="/qr-code1.png" width={40} height={40} alt="chat" />
             </div>
-          </span>
+          </span> */}
         </div>
       </div>
-      <Transition show={open}>
+      {/* <Transition show={open}>
         <Dialog className="relative z-10" onClose={setOpen}>
           <TransitionChild
             enter="ease-out duration-300"
@@ -374,7 +370,7 @@ const Footer = (props: Props) => {
             </div>
           </div>
         </Dialog>
-      </Transition>
+      </Transition> */}
     </div>
   );
 };
